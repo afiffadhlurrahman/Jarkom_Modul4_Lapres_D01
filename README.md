@@ -1,13 +1,16 @@
-# Jarkom Materi Subnetting dan Routing
+# Modul 4 : Subnetting dan Routing
 
 Nama Anggota :
 - 05111840000093 Muhammad Afif Fadhlurrahman
 - 05111740000091 Affan Ahsanul Habib
 
 ### CIDR (Classless Inter Domain Routing)
+- [Subnetting](#subnetting)
+- [Routing](#routing)
 
-#### Subnetting
+# Subnetting
 Langkah 1 - Tentukan subnet yang ada dalam topologi dan lakukan labelling netmask terhadap masing-masing subnet </br>
+
 ![subnet-langkah-A](/img/gambar.png)
 
 Langkah 2 - Gabungkan subnet paling bawah di dalam topologi. Paling bawah berarti subnet yang paling jauh dari internet (gambar awan) </br>
@@ -21,7 +24,6 @@ Langkah 2 - Gabungkan subnet paling bawah di dalam topologi. Paling bawah berart
 ![subnet-langkah-ef](/img/ef.png)
 
 ![subnet-langkah-g](/img/g.jpg)
-
 
 Langkah 3 - Dari proses penggabungan yang telah dilakukan, didapatkan sebuah subnet besar dengan netmask /16. Kali ini dapat menggunakan NID 192.168.0.0, netmask 255.255.0.0. </br>
 
@@ -37,10 +39,9 @@ Langkah 5 - Berdasarkan penghitungan, maka didapatkan pembagian IP sebagai berik
 
 ![hitung-a11-s2](/img/hitung-a11-s2.png)
 
+# Routing
 
-#### Routing
-
-1. SURABAYA
+## 1. SURABAYA
 
 ```
 0.0.0.0/0 via 10.151.78.9
@@ -53,7 +54,7 @@ Langkah 5 - Berdasarkan penghitungan, maka didapatkan pembagian IP sebagai berik
 
 ![routing sby 2](/img/sby2.png)
 
-2. PASURUAN
+## 2. PASURUAN
 
 ```
 0.0.0.0/0 via 192.168.192.1
@@ -62,7 +63,7 @@ Langkah 5 - Berdasarkan penghitungan, maka didapatkan pembagian IP sebagai berik
 
 ![routing pasuruan](/img/pas.png)
 
-3. PROBOLINGGO
+## 3. PROBOLINGGO
 
 ```
 0.0.0.0/0 via 192.168.144.1
@@ -70,7 +71,7 @@ Langkah 5 - Berdasarkan penghitungan, maka didapatkan pembagian IP sebagai berik
 
 ![routing probolinggo](/img/probo.png)
 
-4. BATU
+## 4. BATU
 
 ```
 0.0.0.0/0 via 192.168.32.1
@@ -83,7 +84,7 @@ Langkah 5 - Berdasarkan penghitungan, maka didapatkan pembagian IP sebagai berik
 
 ![routing batu 2](/img/batu2.png)
 
-5. MADIUN
+## 5. MADIUN
 
 ```
 0.0.0.0/0 via 192.168.16.1
@@ -91,7 +92,7 @@ Langkah 5 - Berdasarkan penghitungan, maka didapatkan pembagian IP sebagai berik
 
 ![routing madiun](/img/madiun.png)
 
-6. KEDIRI
+## 6. KEDIRI
 
 ```
 0.0.0.0/0 via 192.168.8.1
@@ -100,7 +101,7 @@ Langkah 5 - Berdasarkan penghitungan, maka didapatkan pembagian IP sebagai berik
 
 ![routing kediri](/img/ked.png)
 
-7. BLITAR
+## 7. BLITAR
 
 ```
 0.0.0.0/0 via 192.168.4.1
