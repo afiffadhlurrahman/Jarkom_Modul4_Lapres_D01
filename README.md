@@ -39,3 +39,71 @@ Langkah 5 - Berdasarkan penghitungan, maka didapatkan pembagian IP sebagai berik
 
 
 #### Routing
+
+1. SURABAYA
+
+```
+0.0.0.0/0 via 10.151.78.9
+192.168.128.0/18 via 192.168.192.2
+192.168.0.0/19 via 192.168.32.2
+10.151.79.16/30 via 192.168.32.2
+```
+
+![routing sby 1](/img/sby1.png)
+
+![routing sby 2](/img/sby2.png)
+
+2. PASURUAN
+
+```
+0.0.0.0/0 via 192.168.192.1
+192.168.128.0/20 via 192.168.144.2
+```
+
+![routing pasuruan](/img/pas.png)
+
+3. PROBOLINGGO
+
+```
+0.0.0.0/0 via 192.168.144.1
+```
+
+![routing probolinggo](/img/probo.png)
+
+4. BATU
+
+```
+0.0.0.0/0 via 192.168.32.1
+192.168.18.0/28 via 192.168.16.2
+192.168.0.0/21 via 192.168.8.2
+10.151.79.16/30 via 192.168.8.2
+```
+
+![routing batu 1](/img/batu1.png)
+
+![routing batu 2](/img/batu2.png)
+
+5. MADIUN
+
+```
+0.0.0.0/0 via 192.168.16.1
+```
+
+![routing madiun](/img/madiun.png)
+
+6. KEDIRI
+
+```
+0.0.0.0/0 via 192.168.8.1
+192.168.0.0/22 via 192.168.4.2
+```
+
+![routing kediri](/img/ked.png)
+
+7. BLITAR
+
+```
+0.0.0.0/0 via 192.168.4.1
+```
+
+![routing blitar](/img/blitar.png)
