@@ -65,7 +65,7 @@ uml_switch -unix switch22 > /dev/null < /dev/null &
 uml_switch -unix switch25 > /dev/null < /dev/null &
 
 # Router
-xterm -T SURABAYA -e linux ubd0=SURABAYA,jarkom umid=SURABAYA eth0=tuntap,,,10.151.70.9 eth1=daemon,,,switch13 eth2=daemon,,,switch1 eth3=daemon,,,switch3 eth4=daemon,,,switch4 mem=64M &
+xterm -T SURABAYA -e linux ubd0=SURABAYA,jarkom umid=SURABAYA eth0=tuntap,,,10.151.78.9 eth1=daemon,,,switch13 eth2=daemon,,,switch1 eth3=daemon,,,switch3 eth4=daemon,,,switch4 mem=64M &
 xterm -T PASURUAN -e linux ubd0=PASURUAN,jarkom umid=PASURUAN eth0=daemon,,,switch4 eth1=daemon,,,switch19 eth2=daemon,,,switch6 mem=64M &
 xterm -T PROBOLINGGO -e linux ubd0=PROBOLINGGO,jarkom umid=PROBOLINGGO eth0=daemon,,,switch6 eth1=daemon,,,switch16 eth2=daemon,,,switch15 mem=64M &
 xterm -T BATU -e linux ubd0=BATU,jarkom umid=BATU eth0=daemon,,,switch3 eth1=daemon,,,switch22 eth2=daemon,,,switch21 eth3=daemon,,,switch12 mem=64M &
@@ -96,9 +96,9 @@ xterm -T TULUNGAGUNG -e linux ubd0=TULUNGAGUNG,jarkom umid=TULUNGAGUNG eth0=daem
 SURABAYA
 auto eth0
 iface eth0 inet static
-address 10.151.70.10
+address 10.151.78.10
 netmask 255.255.255.252
-gateway 10.151.70.9
+gateway 10.151.78.9
 
 auto eth1
 iface eth1 inet static
@@ -173,7 +173,7 @@ netmask 255.255.252.0
 
 auto eth3
 iface eth3 inet static
-address 192.168.4.108
+address 192.168.4.109
 netmask 255.255.255.252
 
 MADIUN
@@ -191,9 +191,9 @@ netmask 255.255.255.240
 KEDIRI
 auto eth0
 iface eth0 inet static
-address 192.168.4.109
+address 192.168.4.110
 netmask 255.255.255.252
-gateway 192.168.4.108
+gateway 192.168.4.109
 
 auto eth1
 iface eth1 inet static
@@ -311,3 +311,42 @@ gateway 192.168.20.1
 ```
 
 # Routing
+```
+SURABAYA
+route add -net 192.168.12.0 netmask 255.255.252.0 gw 192.168.4.102
+route add -net 192.168.4.104 netmask 255.255.255.252 gw 192.168.4.102
+route add -net 192.168.24.0 netmask 255.255.248.0 gw 192.168.4.102
+route add -net 192.168.4.128 netmask 255.255.255.128 gw 192.168.4.102
+route add -net 192.168.6.0 netmask 255.255.254.0 gw 192.168.4.98
+route add -net 192.168.4.112 netmask 255.255.255.240 gw 192.168.4.98
+route add -net 192.168.16.0 netmask 255.255.252.0 gw 192.168.4.98
+route add -net 192.168.4.108 netmask 255.255.255.252 gw 192.168.4.98
+route add -net 10.151.79.20 netmask 255.255.255.252 gw 192.168.4.98
+route add -net 192.168.5.0 netmask 255.255.255.0 gw 192.168.4.98
+route add -net 192.168.20.0 netmask 255.255.252.0 gw 192.168.4.98
+
+PASURUAN
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.4.101
+route add -net 192.168.24.0 netmask 255.255.248.0 gw 192.168.4.106
+route add -net 192.168.4.128 netmask 255.255.255.128 gw 192.168.4.106
+
+PROBOLINGGO
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.4.105
+
+BATU
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.4.97
+route add -net 192.168.4.112 netmask 255.255.255.240 gw 192.168.6.2
+route add -net 10.151.79.20 netmask 255.255.255.252 gw 192.168.4.110
+route add -net 192.168.5.0 netmask 255.255.255.0 gw 192.168.4.110
+route add -net 192.168.20.0 netmask 255.255.252.0 gw 192.168.4.110
+
+MADIUN
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.6.1
+
+KEDIRI
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.4.108
+route add -net 192.168.20.0 netmask 255.255.252.0 gw 192.168.5.2
+
+BLITAR
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.5.1
+```
